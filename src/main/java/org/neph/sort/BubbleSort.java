@@ -5,32 +5,40 @@ package org.neph.sort;
  **/
 public class BubbleSort {
 
-    private static void bubbleSort(int[] unsortedArr){
+    private static void bubbleSort(int[] unsortedArr) {
         int temp;
         int n = unsortedArr.length;
 
-        for (int i=0; i<n-1; i++){
-            for (int j=0; j<n-1; j++){
-                if (unsortedArr[j]>unsortedArr[j+1]){
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (unsortedArr[j] > unsortedArr[j + 1]) {
                     temp = unsortedArr[j];
-                    unsortedArr[j] = unsortedArr[j+1];
-                    unsortedArr[j+1] = temp;
+                    unsortedArr[j] = unsortedArr[j + 1];
+                    unsortedArr[j + 1] = temp;
                 }
             }
         }
     }
 
-    private static void printArray(int[] arr){
+    private static void printArray(int[] arr) {
         System.out.print("[");
-        for (int i : arr){
-            System.out.print(" "+i+" ");
+        int count = 0;
+        for (int i=0; i<arr.length; i++) {
+            count++;
+            if (count>30){
+                System.out.println("\n");
+                count=0;
+            }
+            System.out.print(" " + arr[i] + " ");
         }
         System.out.print("]");
-        System.out.println();
+        System.out.println("\n");
     }
 
     public static void main(String[] args) {
-        int[] arr = {20, 35, -15, 7, 55, 1, 22, 9, 90};
+        int[] arr = {136, 204, 281, 305, 309, 367, 389, 429, 457, 464,3, 4, 96, 155, 162, 163, 188, 245, 411, 433, 90, 114, 179, 251, 267, 286, 360, 407, 418, 473, 73, 118, 171, 193, 260, 262, 400, 415, 427, 500,
+                159, 162, 196, 199, 264, 291, 331, 364, 388, 398, 30, 92, 104, 211, 225, 240, 321, 332, 429, 472, 7, 18, 39, 143, 165, 172, 197, 291, 386, 397, 30,
+                78, 121, 201, 281, 410, 429, 432, 467, 471, 33, 75, 96, 101, 107, 166, 239, 269, 289, 325};
         System.out.println("BEFORE THE SORT: ");
         printArray(arr);
         System.out.println("AFTER THE SORT: ");
