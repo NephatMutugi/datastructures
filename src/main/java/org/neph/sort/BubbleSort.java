@@ -23,13 +23,13 @@ public class BubbleSort {
     private static void printArray(int[] arr) {
         System.out.print("[");
         int count = 0;
-        for (int i=0; i<arr.length; i++) {
+        for (int j : arr) {
             count++;
-            if (count>30){
+            if (count > 30) {
                 System.out.println("\n");
-                count=0;
+                count = 0;
             }
-            System.out.print(" " + arr[i] + " ");
+            System.out.print(" " + j + " ");
         }
         System.out.print("]");
         System.out.println("\n");
