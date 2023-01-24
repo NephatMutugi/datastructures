@@ -41,10 +41,12 @@ fun main(){
 
 
     // ARITHMETICS
-    val a = 35;
+    var a = 35;
     val b = 8;
 
     val result: Double = a/b.toDouble()
 
     println("RESULT of $a/$b is: $result")
+    println("My num is ${a++}")
+    println("My num is ${++a}")
 }
