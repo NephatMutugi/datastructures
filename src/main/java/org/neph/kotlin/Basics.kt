@@ -9,9 +9,9 @@ import java.time.LocalDate
 fun main(){
     var myName = "Nephat"
     myName += " Muchiri"
-    val dateOfBirth = 1998;
-    val currentDate = LocalDate.now().year;
-    val age = currentDate - dateOfBirth;
+    val dateOfBirth = 1998
+    val currentDate = LocalDate.now().year
+    val age = currentDate - dateOfBirth
     println("$myName's age is $age Years.")
 
     /* TEST
@@ -24,7 +24,7 @@ fun main(){
     val testByte: Byte = 25
     val testInt = 2022
     val testLong: Long = 18881234567
-    var testBoolean = true
+    val testBoolean = true
     val testChar = 'a'
 
     println("VARIABLES DATA TYPES")
@@ -37,5 +37,14 @@ fun main(){
     println("testLong: " + testLong::class.qualifiedName)
     println("testBoolean: " + testBoolean::class.qualifiedName)
     println("testChar: " + testChar::class.qualifiedName)
+    println("The length of my str is ${testString.length}")
 
+
+    // ARITHMETICS
+    val a = 35;
+    val b = 8;
+
+    val result: Double = a/b.toDouble()
+
+    println("RESULT of $a/$b is: $result")
 }
