@@ -55,7 +55,7 @@ fun main(){
         else -> print("you're too young")
     }
 
-    var x : Any = 13.37
+    var x: Any = 13.37
     when(x) {
         is Int -> println("$x is an Int")
         !is Double -> println("$x is not Double")
