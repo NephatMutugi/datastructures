@@ -4,8 +4,6 @@ package org.neph.kotlin
 @ Author NMuchiri
  **/
 
-// Is a replacement for switch statements from other programming languages
-
 fun main(){
     // Control Flows
     // If Statements
@@ -61,5 +59,25 @@ fun main(){
         !is Double -> println("$x is not Double")
         is String -> println("$x is a String")
         else -> println("$x is none of the above")
+    }
+
+
+    var numberOfFish = 50
+
+    for (i in 1..numberOfFish){
+        print("=")
+    }
+    println()
+    println("Number of Fish: $numberOfFish")
+    when (numberOfFish){
+        0 -> println("Empty Tank")
+        in 1..39 -> println("Got Fish!")
+        else -> println("That's a lot of fish!")
+    }
+
+    println("====================== SCHOOL LIST ========================")
+    val schools = listOf("mackerel", "trout", "halibut")
+    schools.forEachIndexed() { index, school ->
+        println("${index + 1}: $school")
     }
 }
