@@ -3,6 +3,7 @@ package org.neph.kotlin
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonObject
+import java.util.*
 
 /**
 @ Author NMuchiri
@@ -17,9 +18,7 @@ fun main() {
     val jsonString =
         "{\"corporateCreditInformationRecord\":{\"currencyType\":\"RWF\",\"country\":\"RW\",\"companyRegNo\":\"\",\"dateAccountUpdated\":\"20221129\",\"postalCode\":\"\",\"telephone3\":\"0788866618\",\"telephone2\":\"0788866618\",\"telephone1\":\"0788866618\",\"physicalAddressPlotNumber\":\"\",\"daysInArrears\":\"0\",\"facsimile1\":\"\",\"facsimile2\":\"\",\"institution\":\"SOEURS PALOTTINES REGION MASAKA\",\"emailAddress\":\"\",\"telephone6\":\"0788866618\",\"telephone5\":\"0788866618\",\"telephone4\":\"0788866618\",\"openingBalance\":\"5400000000\",\"companyRegistrationDate\":\"20170501\",\"interestRateatDisbursement\":\"\",\"sectorOfActivity\":\"Religious Institutions/Churches\",\"availableCredit\":\"5400000000\",\"companyCeaseDate\":\"\",\"accountRepaymentTerm\":\"BUL\",\"accountType\":\"I\",\"currentBalance\":\"5400000000\",\"taxNumber\":\"\",\"accountOwner\":\"P\",\"classification\":\"1\",\"physicalAddressDistrict\":\"NYARUGENGE\",\"scheduledPaymentAmount\":\"0\",\"actualPaymentAmount\":\"0\",\"dateAccountOpened\":\"20220210\",\"physicalAddressProvince\":\"UMUJYI WA KIGALI\",\"currentBalanceIndicator\":\"C\",\"postalAddressNumber\":\"\",\"approvalDate\":\"20221129\",\"physicalAddressSector\":\"Masaka\",\"dateAccountClosed\":\"20230101\",\"firstPaymentDate\":\"20230210\",\"industry\":\"Religious Institutions/Churches\",\"dateClosed\":\"\",\"accountStatus\":\"A\",\"termsDuration\":\"2\",\"lastPaymentDate\":\"20230101\",\"physicalAddressCell\":\"OL02000765\",\"physicalAddressLine2\":\"KICUKIRO\",\"tradingName\":\"SOEURS PALOTTINES REGION MASAKA\",\"physicalAddressLine1\":\"MASAKA KICUKIRO\",\"physicalAddressPostalCode\":\"\",\"nature\":\"23\",\"vatNo\":\"\",\"numberofLoanJoinParticipants\":\"\",\"accountNumber\":\"AA2233301PNW\",\"finalPaymentDate\":\"20230210\",\"installmentsInArrears\":\"0\",\"amountPastDue\":\"0\",\"category\":\"11\"},\"recordType\":\"CI\"}\n"
     val gson = GsonBuilder().setPrettyPrinting().create()
-
-    val accountHolderString = gson.toJson(setAccountHolder(jsonString))
-    println("ACCOUNT HOLDER: \n$accountHolderString")
+    println("ACCOUNT HOLDER: \n${gson.toJson(setAccountHolder(jsonString))}")
 
 }
 
@@ -41,6 +40,10 @@ fun setAccountHolder(jsonString: String): AccountHolder{
 fun myFunction(){
     // The body of a function
     println("myFunction was called")
+
+    var nullableName: String = "Nephat"
+//    nullableName = null
+    var len = nullableName.lowercase(Locale.getDefault())
 }
 
 // This function has two parameters and returns a value of type Int
