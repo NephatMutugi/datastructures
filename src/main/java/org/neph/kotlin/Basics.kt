@@ -6,7 +6,12 @@ import java.time.LocalDate
 @ Author NMuchiri
  **/
 
-fun main(){
+fun main(args: Array<String>) {
+
+    args.forEachIndexed{ index, arg ->
+        println("Hello: $index, $arg")
+    }
+
     var myName = "Nephat"
     myName += " Muchiri"
     val dateOfBirth = 1998
