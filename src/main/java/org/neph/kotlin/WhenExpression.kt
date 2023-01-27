@@ -77,7 +77,7 @@ fun main(){
 
     println("====================== SCHOOL LIST ========================")
     val schools = listOf("mackerel", "trout", "halibut")
-    schools.forEachIndexed() { index, school ->
+    schools.forEachIndexed { index, school ->
         println("${index + 1}: $school")
     }
 }
