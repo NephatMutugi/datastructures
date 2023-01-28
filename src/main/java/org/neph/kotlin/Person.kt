@@ -7,10 +7,10 @@ package org.neph.kotlin
 // This is a primary constructor
 class Person(firstName: String, lastName: String) {
 
-    private var firstName : String? = null
-    private var lastName : String? = null
-    init {
+    private var firstName: String? = null
+    private var lastName: String? = null
 
+    init {
         this.firstName = firstName
         this.lastName = lastName
         println(
@@ -20,23 +20,21 @@ class Person(firstName: String, lastName: String) {
     }
 
     var birthDate: Int? = null
+
     // Secondary/ member constructor
-    constructor(firstName: String, lastName: String, birthDate: Int) : this (firstName, lastName){
+    constructor(firstName: String, lastName: String, birthDate: Int) : this(firstName, lastName) {
         this.birthDate = birthDate
     }
 
     var hobby = "Write Code"
-
     fun stateHobby(birthDate: Int) {
         println("My hobby is to $hobby")
         println("${this.firstName} ${this.lastName} is ${(2023 - birthDate)} years old")
     }
 
-    fun calculateAge(currentYear: Int){
-        println("${this.firstName} ${this.lastName} is ${currentYear- this.birthDate!!} years!!")
+    fun calculateAge(currentYear: Int) {
+        println("${this.firstName} ${this.lastName} is ${currentYear - this.birthDate!!} years!!")
     }
-
-
 }
 
 fun main() {
