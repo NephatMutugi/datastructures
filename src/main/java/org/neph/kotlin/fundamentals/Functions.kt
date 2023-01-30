@@ -1,4 +1,4 @@
-package org.neph.kotlin
+package org.neph.kotlin.fundamentals
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
