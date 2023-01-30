@@ -1,17 +1,23 @@
 package org.neph.kotlin.oop
 
-import java.lang.IllegalArgumentException
-
 /**
 @ Author NMuchiri
  **/
 
-fun main(){
-    var myVal: Int = 10
+fun main() {
+    val myCar = Car()
+    myCar.maxSpeed = 120
+    myCar.distance = 500
+    val timeTaken = myCar.timeTaken()
+    println("Time taken to travel: ${myCar.distance} using a car of max speed: ${myCar.maxSpeed} is: $timeTaken.")
 
-    var maxSpeed = myVal.takeIf { it>0 } ?: throw IllegalArgumentException("Max Speed cannot be less than 0")
-    println(maxSpeed)
 }
-class Car {
 
+class Car {
+    var maxSpeed: Int = 0
+    var distance: Int = 0
+
+    fun timeTaken(): Double {
+        return distance.toDouble() / maxSpeed.toDouble()
+    }
 }
