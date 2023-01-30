@@ -163,7 +163,7 @@ class Car3() {
     var myModel: String = "M5"
         private set
 
-    var myMaxSpeed: Int = maxSpeed
+    var myMaxSpeed: Int = 0
         get() = field
         // Custom Setter
         set(value) {
