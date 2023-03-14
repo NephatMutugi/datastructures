@@ -1,4 +1,4 @@
-package org.neph.kotlin
+package org.neph.kotlin.fundamentals
 
 /**
 @ Author NMuchiri
